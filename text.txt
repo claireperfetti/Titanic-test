@@ -1,0 +1,9 @@
+#Heroku deployment of docker
+#update tag to properly name your container:docker tag <image> registry.heroku.com/<app>/<process-type>
+$ sudo docker tag  a6b5c4af8d83 registry.heroku.com/titanic-api-claire/web:latest
+#check tag
+$ sudo docker images
+#push existing image on heroku repository: docker push registry.heroku.com/<app>/<process-type>
+$ sudo docker push registry.heroku.com/titanic-api-claire/web:latest
+#release application
+$ sudo heroku container:release web -a titanic-api-claire

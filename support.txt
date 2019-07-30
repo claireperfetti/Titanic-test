@@ -1,0 +1,25 @@
+$ pip install pipenv 
+$ pipenv --three
+$ pipenv shell
+$ pipenv install pandas numpy flask marshmallow-sqlalchemy flask-sqlalchemy psycopg2-binary flask-migrate flask-script flask-marshmallow sklearn flask-bcrypt pyjwt
+#add the proper url of the database in Titanic_API\create_db
+#create a new database using pg4admin and name it titanic: check owner name, put pwd
+url = 'postgres://claire:user@localhost:5432/titanic'
+$ python create_db.py
+# update db url in app.py
+DATABASE_URL = 'postgres://claire:user@localhost:5432/titanic'
+# update trainind data file url in run_pipeline.py
+TRAINING_DATA_FILE = 'postgres://claire:user@localhost:5432/titanic'
+# update environment variables envvar.envrc:
+SET DATABASE_URL=postgres://claire:user@localhost:5432/titanic
+SET JWT_SECRET_KEY=user
+
+######docker
+#create Docker file in root repository
+$ sudo docker build .
+#check container id
+$ sudo docker images
+#change app.py # Run Server
+if __name__ == '__main__':
+    app.run(host='0.0.0.0')
+
