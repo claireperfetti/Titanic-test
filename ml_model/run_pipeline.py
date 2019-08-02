@@ -8,8 +8,8 @@ from sqlalchemy import create_engine
 print("real", os.path.realpath(__file__))
 
 #TRAINING_DATA_FILE = 'postgres://claire:user@localhost:5432/titanic'
-TRAINING_DATA_FILE = 'postgres://etcigfzo:7qGx3WmRjo5AnJnvsBQbv7OzuyFt_PVD@manny.db.elephantsql.com:5432/etcigfzo'
-
+#TRAINING_DATA_FILE = 'postgres://etcigfzo:7qGx3WmRjo5AnJnvsBQbv7OzuyFt_PVD@manny.db.elephantsql.com:5432/etcigfzo'
+TRAINING_DATA_FILE = os.environ['DATABASE_URL']
 #TESTING_DATA_FILE = os.path.dirname(os.path.realpath(__file__)) + '/datasets/test.csv'
 MODEL_PATH = os.path.dirname(os.path.realpath(__file__)) + '/saved_model/model.sav'
 engine = create_engine(TRAINING_DATA_FILE)
