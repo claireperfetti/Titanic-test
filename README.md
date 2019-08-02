@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Titanic-test
 =======
 # Titanic_API_deployment
