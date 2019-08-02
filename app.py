@@ -11,8 +11,6 @@ from sqlalchemy import create_engine
 # Init app
 app = Flask(__name__)
 basedir = os.path.abspath(os.path.dirname(__file__))
-#DATABASE_URL = 'postgres://claire:user@localhost:5432/titanic'
-#DATABASE_URL = 'postgres://etcigfzo:7qGx3WmRjo5AnJnvsBQbv7OzuyFt_PVD@manny.db.elephantsql.com:5432/etcigfzo'
 DATABASE_URL = os.environ['DATABASE_URL']
 # Database
 app.config[
